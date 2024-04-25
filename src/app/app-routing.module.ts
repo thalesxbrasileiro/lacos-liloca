@@ -7,6 +7,7 @@ import { NaoEncontradoComponent } from './page/nao-encontrado/nao-encontrado.com
 import { HomeComponent } from './page/home/home.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'contato', component: ContatoComponent },
   { path: 'sobre', component: SobreComponent },
