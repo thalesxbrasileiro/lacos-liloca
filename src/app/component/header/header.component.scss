@@ -1,52 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
-  .example-label {
-    display: table-cell;
-    font-size: 14px;
-    margin-left: 8px;
-    min-width: 120px;
-  }
-  
-  .example-button-row {
-    display: table-cell;
-    max-width: 600px;
-    padding-left: 10%;
-  }
-  
-  .example-button-row .mat-mdc-button-base {
-    margin: 8px 8px 8px 0;
-    border-radius: 5%;
-  }
-  
-  .example-flex-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .example-button-container {
-    display: flex;
-    justify-content: center;
-    width: 120px;
+$button-margin: 8px;
+$button-radius: 50px;
+$image-width: 7%;
+$padding: 2%;
+$font-size: 2.5rem; 
+$shadow-color: rgba(0, 0, 0, 0.2);
+$text-color: gray;
+
+.example-button-row .mat-mdc-button-base {
+  background: $text-color; 
+  border-radius: $button-radius;
+  color: whitesmoke; 
+  margin: $button-margin $button-margin $button-margin 0;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; 
+
+  &:active {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+    transform: translateY(0); 
   }
 
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-3px); 
+  }
+}
+
 .dancing-script {
-  font-family: "Dancing Script", cursive;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 40px;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  color: gray; 
-  padding-left: 2%; 
-  padding-right: 38%;
+  color: $text-color; 
   cursor: pointer; 
+  font-family: "Dancing Script", cursive;
+  font-size: $font-size;
+  font-style: normal;
+  font-weight: 500;
+  padding-left: $padding; 
+  padding-right: 50%;
+  text-shadow: 2px 2px 2px $shadow-color;
 }
   
-  img {
-    width: 7%;
-    height: auto;
-    padding-left: 2%;
-    margin-right: 0;
-  }
-  
+img {
+  height: auto;
+  margin-right: 0;
+  padding-left: $padding;
+  width: $image-width;
+}
