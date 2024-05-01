@@ -14,6 +14,7 @@ import { RouterLink } from '@angular/router';
 import { NaoEncontradoComponent } from './page/nao-encontrado/nao-encontrado.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { HomeComponent } from './page/home/home.component';
+import { CardComponent } from './component/card/card.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HomeComponent } from './page/home/home.component';
     SobreComponent,
     NaoEncontradoComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
